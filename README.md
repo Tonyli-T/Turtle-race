@@ -8,4 +8,4 @@ Design:
 	2. Maybe square table?
 	3. Prop: extra dice，teleport
 	
-	(Art do it at last)  
+Mayday Mayday
