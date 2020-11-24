@@ -1,18 +1,23 @@
 import turtle
 import random
 from playsound import playsound
-import sounddevice as sd
-from scipy.io.wavfile import write
 
-# Recording turtle sound
-fs = 44100
-seconds = 3
-
-my_recording = sd.rec(int(seconds * fs), samplerate=fs, channels=1)
-sd.wait()
-write('output.wav', fs, my_recording)
-
-playsound('output.wav')
+# Code intended to record player's sound and apply into the game.
+# Apparently, we failed to do that
+# ---------------------------------------------------
+# import sounddevice as sd
+# from scipy.io.wavfile import write
+#
+# # Recording turtle sound
+# fs = 44100
+# seconds = 3
+#
+# my_recording = sd.rec(int(seconds * fs), samplerate=fs, channels=2)
+# sd.wait()
+# write('output.wav', fs, my_recording)
+#
+# playsound('output.wav')
+# ---------------------------------------------------
 
 
 # A method that initializes two turtles
@@ -27,7 +32,7 @@ def init(p, color, x, y):
     p.goto(x - 50, y + 50)
     p.pendown()
 
-    for index in range(20):
+    for index in range(15):
         p.bk(50)
         p.stamp()
     p.penup()
@@ -35,7 +40,7 @@ def init(p, color, x, y):
 
 # Setting up the environment
 s = turtle.Screen()
-s.setup(width=1.0, height=1.0)
+s.setup(width=1300, height=1000)
 s.bgcolor("pink")
 s.title("Welcome to the ultimate turtle tournament")
 
